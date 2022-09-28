@@ -16,9 +16,21 @@ The main goal of this project is to simulate a cloud storage system using multi-
 **Thread Management**
 The central threads used for this project are Synchronization Threads, Server Updater Threads, Client Thread, Block Generator Threads, Watcher Thread, Client Updater Threads. The
 significance of each thread and the communication between them goes in the way mentioned below when an update or change happens:
+
 • If a new file is added or edits have been made to increase any existing file size, the block generator will create blocks for those additional data.
+
 • The watcher thread catches all the updates on the client-side.
+
 • The server-side queue maintains a list for all incoming updating requests from the client.
+
 • The synchronization thread handles each request from the message queue and synchronizes the updating process between all the server updater threads.
+
 • The server updater thread updates the server files’ primary copy.
+
 • Then, the server sends messages to all the clients' watcher threads about what updates took place on the server-side.
+
+**Demo Picture**
+
+![My Image](images/my-image2.png)
+
+![My Image](images/my-image3.png)
