@@ -1,13 +1,5 @@
 # Cloud-Storage-System
-**How to Run**
-1. Install eclipse.
-2. Go to File>Import>Existing Projects into Workspace
-3. Browse and select the project directory as root directory.
-4. select Finish in the below
-5. The project will open in Eclipse
-6. Go to src>fileSync in project explorer
-7. Run ServerRunner.java(only one server instance can be ran) 
-and then run ClientRunner.java(multiple run will open multiple clients)
+
 **Description**
 The main goal of this project is to simulate a cloud storage system using multi-threading java programming to achieve maximum concurrency in the system. The main functionalities included in the project are File Sync, Delta Sync, Suspend/Resume and Sync status. We especially focused on building a Thread Management system that can achieve the highest concurrency around the system. Additionally, we used UDP protocol to transfer data across the network, which made concurrency programming increasingly difficult because of the unreliable nature of UDP.
 *System Architecture*
